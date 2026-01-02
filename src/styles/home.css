@@ -1,0 +1,87 @@
+/* =========================
+   Home / Hero Section
+   ========================= */
+
+.home {
+  min-height: 100vh;
+  padding: 6rem 10%;
+  display: flex;
+  align-items: center;
+  background: var(--bg-color);
+}
+
+.home-content {
+  max-width: 700px;
+}
+
+.home-content h1 {
+  font-size: var(--big-font);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.home-content h1 span {
+  color: var(--main-color);
+}
+
+.home-content h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 1rem 0;
+  color: var(--second-color);
+}
+
+.home-content p {
+  font-size: var(--p-font);
+  margin: 1.5rem 0 2.5rem;
+  line-height: 1.6;
+  color: var(--second-color);
+}
+
+/* Buttons */
+.home-btns {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: 2px solid var(--main-color);
+  background: transparent;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background: var(--main-color);
+  color: #000;
+}
+
+.btn:hover {
+  background: var(--main-color);
+  color: #000;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .home {
+    padding: 5rem 6%;
+    text-align: center;
+  }
+
+  .home-content h1 {
+    font-size: 3rem;
+  }
+
+  .home-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .home-btns {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
