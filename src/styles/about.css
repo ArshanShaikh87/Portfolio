@@ -129,26 +129,40 @@
    Mobile Responsive (FIXED)
    ========================= */
 
-@media (max-width: 768px) {
+/* =========================
+   Mobile Fixes for About Hero
+   ========================= */
 
-  /* About hero */
+@media (max-width: 768px) {
+  
+  /* Ensure overlay content is centered and fits well */
   .about-overlay {
-    padding: 0 6%;
+    padding: 0 8%;
     justify-content: center;
   }
 
-  .about-text {
-    text-align: left;
-  }
-
+  /* About heading size adjustment */
   .about-text h2 {
-    font-size: 2rem;
+    font-size: 1.8rem; /* Slightly bigger on mobile so it doesn't look too small */
+    margin-bottom: 1rem;
   }
 
+  /* About paragraph font size slightly smaller for better fit */
   .about-text p {
     font-size: 0.95rem;
-    line-height: 1.7;
+    margin-bottom: 1.2rem;
   }
+
+  /* Button should stay within the overlay */
+  .about-actions {
+    text-align: center;
+  }
+
+  .about-actions .btn {
+    padding: 10px 24px; /* Slightly smaller padding on mobile */
+    font-size: 0.9rem;
+  }
+
 
   /* Skills */
   .skills {
@@ -172,4 +186,5 @@
   .skill-logo span {
     font-size: 0.85rem;
   }
+
 }
