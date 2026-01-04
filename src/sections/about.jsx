@@ -65,6 +65,7 @@ function About() {
 
       {/* ================= SKILLS SECTION ================= */}
       <section className="skills">
+        <h2 class="skill-heading"><span>My</span> Skills</h2>
         {Object.entries(skillGroups).map(([group, items]) => (
           <div className="skill-group" key={group}>
             <h4>{group}</h4>

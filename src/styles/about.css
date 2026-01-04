@@ -34,13 +34,14 @@
 /* Text block */
 .about-text {
   max-width: 600px;
-  color: #fff;
+  color:var( --second-color);
   text-align: left;
 }
 
 .about-text h2 {
   font-size: var(--h2-font);
   margin-bottom: 1.5rem;
+  color:var(--text-color)
 }
 
 .about-text h2 span {
@@ -78,6 +79,16 @@
   margin-top: 4rem;
   padding-top: 3rem;
   border-top: 1px solid rgba(255,255,255,0.08);
+  
+}
+.skill-heading{
+  text-align: center;
+  font-size: var(--h2-font);
+  margin-bottom: 1.5rem;
+  color:var(--text-color)
+}
+.skill-heading,span{
+  color: var(--main-color);
 }
 
 .skill-group {
@@ -106,12 +117,12 @@
 }
 
 .skill-logo i {
-  font-size: 3rem;
+  font-size: 4.5rem;
 }
 
 .skill-logo span {
-  font-size: 0.95rem;
-  color: #ddd;
+  font-size: 0.98rem;
+  color:var(--second-color);
 }
 
 /* =========================
