@@ -1,113 +1,164 @@
 /* =========================
-   About Section
+   About Section – Hero Style
    ========================= */
 
-.about {
-  padding: 6rem 10%;
-  background: var(--second-bg-color);
+.about-bg {
+  height: 100vh;
+  max-height: 100vh;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items:center;
+  position: relative;
+  overflow: hidden;
 }
 
-.about-wrapper {
+/* Dark + gradient overlay for readability */
+.about-overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.55) 45%,
+    rgba(0, 0, 0, 0.25) 100%
+  );
+
   display: flex;
   align-items: center;
-  gap: 4rem;
+  padding: 0 10%;
 }
 
-/* Image */
-.about-img img {
-  width: 280px;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 20px;
-  border: 3px solid var(--main-color);
-}
-
-/* Content */
-.about-content {
+/* Text block */
+.about-text {
   max-width: 600px;
+  color: #fff;
+  text-align: left;
 }
 
-.about-content h2 {
+.about-text h2 {
   font-size: var(--h2-font);
   margin-bottom: 1.5rem;
 }
 
-.about-content h2 span {
+.about-text h2 span {
   color: var(--main-color);
 }
 
-.about-content p {
+.about-text p {
   font-size: var(--p-font);
-  line-height: 1.7;
-  color: var(--second-color);
-  margin-bottom: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1.4rem;
+  opacity: 0.95;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .about {
-    padding: 5rem 6%;
-  }
-
-  .about-wrapper {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-img img {
-    width: 220px;
-    height: 220px;
-  }
+/* Button */
+.about-actions .btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 12px 28px;
+  background: var(--main-color);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.3s ease;
 }
 
+.about-actions .btn:hover {
+  opacity: 0.9;
+}
 
 /* =========================
-   Skills Section (inside About)
+   Skills Section
    ========================= */
 
 .skills {
-  margin-top: 3rem;
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
 }
 
-.skills h4 {
+.skill-group {
+  margin-bottom: 3rem;
+}
+
+.skill-group h4 {
   font-size: 1.4rem;
   margin-bottom: 1.5rem;
+  color: #fff;
 }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-  gap: 1.8rem;
-  align-items: center;
-}
-
-.skill-item {
-  background: var(--bg-color);
-  border-radius: 12px;
-  padding: 1.2rem;
+/* Horizontal skills */
+.skills-horizontal {
   display: flex;
-  flex-direction: column;
+  gap: 3rem;
+  flex-wrap: wrap;
   align-items: center;
-  transition: 0.3s;
 }
 
-.skill-item:hover {
-  transform: translateY(-6px);
-  border: 1px solid var(--main-color);
+/* Skill logo */
+.skill-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
 }
 
-.skill-item img {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 0.6rem;
+.skill-logo i {
+  font-size: 3rem;
 }
 
-.skill-item span {
-  font-size: 0.85rem;
-  color: var(--second-color);
+.skill-logo span {
+  font-size: 0.95rem;
+  color: #ddd;
 }
-.skill-item i {
-  font-size: 2.2rem;
-  color: var(--main-color);
-  margin-bottom: 0.6rem;
+
+/* =========================
+   Mobile Responsive (FIXED)
+   ========================= */
+
+@media (max-width: 768px) {
+
+  /* About hero */
+  .about-overlay {
+    padding: 0 6%;
+    justify-content: center;
+  }
+
+  .about-text {
+    text-align: left;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  /* Skills */
+  .skills {
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+  }
+
+  .skill-group h4 {
+    text-align: center;
+  }
+
+  .skills-horizontal {
+    justify-content: center; /* 👈 IMPORTANT FIX */
+    gap: 2rem;
+  }
+
+  .skill-logo i {
+    font-size: 2.4rem;
+  }
+
+  .skill-logo span {
+    font-size: 0.85rem;
+  }
 }

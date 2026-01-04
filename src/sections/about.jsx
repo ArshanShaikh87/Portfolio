@@ -1,93 +1,86 @@
 import '../styles/about.css';
-import profileImg from '../assets/About.jpg';
+// import profileImg from '../assets/about3.jpg';
+
+const skillGroups = {
+  Frontend: [
+    { name: 'React', icon: 'devicon-react-original colored' },
+    { name: 'HTML5', icon: 'devicon-html5-plain colored' },
+    { name: 'CSS3', icon: 'devicon-css3-plain colored' },
+    { name: 'JavaScript', icon: 'devicon-javascript-plain colored' },
+  ],
+  Backend: [
+    { name: 'Java', icon: 'devicon-java-plain colored' },
+    { name: 'Spring Boot', icon: 'devicon-spring-plain colored' },
+    { name: 'Python', icon: 'devicon-python-plain colored' },
+    { name: 'Django', icon: 'devicon-django-plain colored' },
+    { name: 'Oracle DB', icon: 'devicon-oracle-original colored' },
+  ],
+  Tools: [
+    { name: 'Git', icon: 'devicon-git-plain colored' },
+    { name: 'GitHub', icon: 'devicon-github-original colored' },
+    { name: 'Vercel', icon: 'devicon-vercel-plain colored' },
+  ],
+};
 
 function About() {
   return (
-    <section id="about" className="about">
-      <div className="about-wrapper">
+    <>
+      {/* ================= ABOUT HERO ================= */}
+      <section
+        id="about"
+        className="about-bg"
+        // style={{ backgroundImage: `url(${profileImg})` }}
+      >
+        <div className="about-overlay">
+          <div className="about-text">
+            <h2>
+              About <span>Me</span>
+            </h2>
 
-        {/* Image */}
-        <div className="about-img">
-          <img src={profileImg} alt="Arshan Profile" />
+            <p>
+              I’m <strong>Arshan Munir Shaikh</strong>, a Full Stack Java Developer passionate about building clean, 
+              scalable, and user-friendly web applications.
+               I enjoy working on both frontend and backend development and continuously improving my technical skills.
+            </p>
+
+            <p>
+              I work with <strong>React</strong>, <strong>Spring Boot</strong>, <strong>Python, Django</strong>, and
+              <strong> Oracle Database</strong>, As a fresher, I focus on practical learning, real-world projects,
+               and writing code that follows industry standards and best practices.
+            </p>
+
+            <div className="about-actions">
+              <a
+                href="https://www.canva.com/design/DAGTj_wmQa0/QwlhnMzjYulcDocHrbvEcg/edit?utm_content=DAGTj_wmQa0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                className="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Check My Resume
+              </a>
+            </div>
+          </div>
         </div>
+      </section>
 
-        {/* Content */}
-        <div className="about-content">
-          <h2>
-            About <span>Me</span>
-          </h2>
+      {/* ================= SKILLS SECTION ================= */}
+      <section className="skills">
+        {Object.entries(skillGroups).map(([group, items]) => (
+          <div className="skill-group" key={group}>
+            <h4>{group}</h4>
 
-          <p>
-            I’m a passionate Full Stack Java Developer with hands-on experience
-            in building responsive and scalable web applications.
-          </p>
-
-          <p>
-            My core tech stack includes React for frontend development, Spring
-            Boot for backend APIs, and Oracle Database for reliable data
-            management.
-          </p>
-
-          <p>
-            As a fresher, I focus on writing clean code, understanding system
-            design basics, and continuously improving through real-world
-            projects.
-          </p>
-        </div>
-
-      </div>
-      <div className="skills">
-  <h4>My Skills</h4>
-
-  <div className="skills-grid">
-    <div className="skill-item">
-      <i className="devicon-react-original"></i>
-      <span>React</span>
-    </div>
-
-    <div className="skill-item">
-      <i className="devicon-html5-plain"></i>
-      <span>HTML</span>
-    </div>
-
-    <div className="skill-item">
-      <i className="devicon-css3-plain"></i>
-      <span>CSS</span>
-    </div>
-
-    <div className="skill-item">
-      <i className="devicon-javascript-plain"></i>
-      <span>JavaScript</span>
-    </div>
-
-    <div className="skill-item">
-      <i className="devicon-java-plain"></i>
-      <span>Java</span>
-    </div>
-
-    <div className="skill-item">
-      <i className="devicon-spring-plain"></i>
-      <span>Spring Boot</span>
-    </div>
-
-    <div className="skill-item">
-      <i className="devicon-oracle-original"></i>
-      <span>Oracle</span>
-    </div>
-
-    <div className="skill-item">
-      <i className="devicon-git-plain"></i>
-      <span>Git</span>
-    </div>
-
-    <div className="skill-item">
-      <i className="devicon-github-original"></i>
-      <span>GitHub</span>
-    </div>
-  </div>
-</div>
-
-    </section>
+            <div className="skills-horizontal">
+              {items.map((skill, index) => (
+                <div className="skill-logo" key={index}>
+                  <i className={skill.icon}></i>
+                  <span>{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </section>
+    </>
   );
 }
 
