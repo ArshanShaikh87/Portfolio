@@ -17,62 +17,136 @@
   color: var(--main-color);
 }
 
-/* Grid */
+/* =========================
+   Services Grid
+   ========================= */
+
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* 2 x 2 on desktop */
   gap: 2.5rem;
 }
 
-/* Card */
+/* =========================
+   Service Card
+   ========================= */
+
 .service-card {
-  background: var(--second-bg-color);
-  padding: 2.5rem 2rem;
-  border-radius: 20px;
+  background: linear-gradient(
+    145deg,
+    var(--second-bg-color),
+    #1b1b1b
+  );
+  padding: 2.8rem 2.2rem;
+  border-radius: 22px;
   text-align: center;
-  border: 2px solid transparent;
-  transition: 0.3s ease;
+  border: 1.5px solid rgba(255, 77, 5, 0.15);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle hover glow */
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 77, 5, 0.12),
+    transparent
+  );
+  opacity: 0;
+  transition: 0.35s ease;
+}
+
+.service-card:hover::before {
+  opacity: 1;
 }
 
 .service-card:hover {
+  transform: translateY(-10px);
   border-color: var(--main-color);
-  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
 }
 
-/* Icon */
+/* =========================
+   Icon
+   ========================= */
+
 .service-icon {
-  font-size: 2.8rem;
+  font-size: 3rem;
   color: var(--main-color);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.6rem;
 }
 
-/* Title */
+/* =========================
+   Title
+   ========================= */
+
 .service-card h3 {
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 
-/* Text */
+/* =========================
+   Text
+   ========================= */
+
 .service-card p {
   font-size: var(--p-font);
   color: var(--second-color);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* Tablet */
+/* =========================
+   Tablet
+   ========================= */
+
 @media (max-width: 992px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 }
 
-/* Mobile */
+/* =========================
+   Mobile (Horizontal Scroll)
+   ========================= */
+
 @media (max-width: 768px) {
   .services {
     padding: 5rem 6%;
   }
 
-  .services-grid {
-    grid-template-columns: 1fr;
+  .services h2{
+    font-size: 2rem;
   }
+  .services p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+  }
+  .services h3{
+    font-size: 1.3rem;
+  }
+  .services-grid {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+  }
+
+  .service-card {
+    min-width: 85%;
+    scroll-snap-align: center;
+  }
+
+  .services-grid::-webkit-scrollbar {
+    display: none;
+  }
+ 
 }
