@@ -1,136 +1,171 @@
 /* =========================
-   Contact Section
+   Contact Section – Split Layout (Final)
    ========================= */
 
-.contact {
-  padding: 6rem 10%;
-  background: var(--bg-color);
-}
-
-.contact h2 {
-  font-size: var(--h2-font);
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.contact h2 span {
-  color: var(--main-color);
-}
-
-/* Layout */
+/* Split Container */
 .contact-container {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 4rem;
+  padding: 3.5rem;
+  border-radius: 10px;
   background: var(--second-bg-color);
-  padding: 3rem;
-  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
 }
 
-/* LEFT SIDE */
-.contact-info h3 {
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
+/* =========================
+   LEFT SIDE – INFO
+   ========================= */
+
+.contact-title {
+  font-size: var(--h2-font);
+  margin-bottom: 1.5rem;
+}
+
+.contact-title span {
+  color: var(--main-color);
 }
 
 .contact-info p {
   font-size: var(--p-font);
   color: var(--second-color);
-  margin-bottom: 2rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
 }
 
-/* Info items */
+/* Contact Items */
 .contact-item {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  gap: 1.2rem;
+  margin-bottom: 1.6rem;
   font-size: 1rem;
 }
 
 .contact-item span {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: var(--main-color);
 }
 
-/* Social icons */
+.contact-item a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: var(--main-color);
+}
+
+/* Social Icons */
 .social-links {
   display: flex;
   gap: 1.2rem;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 .social-links a {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--bg-color);
+  width: 52px;
+  height: 52px;
+  border-radius: 25%;
+  background: var(--second-bg-color);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--main-color);
+  font-size: 1.8rem;
+  transition: 0.3s ease;
   text-decoration: none;
-  font-size: 1.2rem;
-  transition: 0.3s;
 }
 
 .social-links a:hover {
   background: var(--main-color);
   color: #000;
+  transform: translateY(-4px);
 }
 
-/* RIGHT SIDE (FORM) */
+/* =========================
+   RIGHT SIDE – FORM
+   ========================= */
+
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1.4rem;
+  gap: 1.6rem;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 0.9rem 1rem;
+  padding: 1rem 1.2rem;
   background: transparent;
   border: 1.5px solid #444;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 1rem;
   color: var(--text-color);
   outline: none;
+  transition: 0.3s ease;
 }
 
 .contact-form textarea {
   resize: none;
-  height: 140px;
+  height: 150px;
 }
 
+/* Focus Effect */
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: var(--main-color);
+  box-shadow: 0 0 0 3px rgba(255, 77, 5, 0.2);
 }
 
+/* Submit Button */
 .contact-form button {
+  margin-top: 1rem;
   width: fit-content;
-  padding: 0.8rem 2.5rem;
-  border-radius: 30px;
+  padding: 0.9rem 3rem;
+  border-radius: 10px;
   border: none;
   background: var(--main-color);
-  color: #000;
+  color:var(--text-color);
   font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .contact-form button:hover {
-  opacity: 0.85;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 77, 5, 0.4);
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .contact {
-    padding: 5rem 6%;
-  }
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
 
+@media (max-width: 768px) {
   .contact-container {
     grid-template-columns: 1fr;
+    padding: 2.5rem 1.8rem;
+    gap: 3rem;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+  .contact h2{
+    font-size: 2rem;
+  }
+  .contact p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+  }
+  .contact h3{
+    font-size: 1.3rem;
+  }
+  .social-links a{
+    width: 32px;
+    height: 32px;
   }
 }

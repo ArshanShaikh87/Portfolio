@@ -3,44 +3,61 @@ import '../styles/contact.css';
 function Contact() {
   return (
     <section id="contact" className="contact">
-      <h2>
-        Contact <span>Me</span>
-      </h2>
 
       <div className="contact-container">
 
         {/* LEFT SIDE */}
         <div className="contact-info">
-          <h3>Get in Touch</h3>
+          <h2 className="contact-title">
+            Contact <span>Me!</span>
+          </h2>
+
           <p>
-            Feel free to contact me for opportunities, collaborations,
-            or any queries related to web development.
+            Feel free to reach out for job opportunities, freelance work,
+            collaborations, or any web development related queries.
           </p>
 
           <div className="contact-item">
-            <span>📞</span>
-            <div>+91 8793740825</div>
+            <span>
+              <i className="fas fa-phone"></i>
+            </span>
+            <a href="tel:+918793740825">+91 8793740825</a>
           </div>
 
           <div className="contact-item">
-            <span>✉️</span>
-            <div>arshanshaikh200@gmail.com</div>
+            <span>
+              <i className="fas fa-envelope"></i>
+            </span>
+            <a href="mailto:arshanshaikh200@gmail.com">
+              arshanshaikh200@gmail.com
+            </a>
           </div>
 
           <div className="social-links">
-            <a href="#" title="LinkedIn">in</a>
-            <a href="#" title="GitHub">GH</a>
-            <a href="#" title="Instagram">IG</a>
+            <a href="https://www.linkedin.com" target="_blank" title="LinkedIn">
+              <i className="fab fa-linkedin-in"></i>
+            </a>
+
+            <a href="https://github.com" target="_blank" title="GitHub">
+              <i className="fab fa-github"></i>
+            </a>
+
+            <a href="https://www.instagram.com" target="_blank" title="Instagram">
+              <i className="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://www.instagram.com" target="_blank" title="Whatsapp">
+              <i className="fab fa-whatsapp"></i>
+            </a>
           </div>
         </div>
 
         {/* RIGHT SIDE */}
         <form className="contact-form">
-          <input type="text" placeholder="Your Name" />
-          <input type="tel" placeholder="Your Phone" />
-          <input type="email" placeholder="Your Email" />
-          <textarea placeholder="Your Message"></textarea>
-
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <input type="phone" placeholder="Your Mobile" required />
+          <textarea placeholder="Your Message" required></textarea>
           <button type="submit">Send Message</button>
         </form>
 
