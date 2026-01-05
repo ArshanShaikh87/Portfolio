@@ -10,12 +10,12 @@
   background-repeat: no-repeat;
 
   display: flex;
-  align-items:center;
+  align-items: center;
   position: relative;
   overflow: hidden;
 }
 
-/* Dark + gradient overlay for readability */
+/* Overlay (Desktop only) */
 .about-overlay {
   width: 100%;
   height: 100%;
@@ -34,31 +34,33 @@
 /* Text block */
 .about-text {
   max-width: 600px;
-  color:var( --second-color);
+  color: var(--second-color);
   text-align: left;
 }
 
+/* Heading */
 .about-text h2 {
   font-size: var(--h2-font);
-  margin-bottom: 1.5rem;
-  color:var(--text-color)
+  margin-bottom: 1.4rem;
+  color: var(--text-color);
 }
 
 .about-text h2 span {
   color: var(--main-color);
 }
 
+/* Paragraph */
 .about-text p {
   font-size: var(--p-font);
-  line-height: 1.8;
-  margin-bottom: 1.4rem;
+  line-height: 1.75;
+  margin-bottom: 1.3rem;
   opacity: 0.95;
 }
 
 /* Button */
 .about-actions .btn {
   display: inline-block;
-  margin-top: 1.5rem;
+  margin-top: 1.4rem;
   padding: 12px 28px;
   background: var(--main-color);
   color: #fff;
@@ -78,16 +80,18 @@
 .skills {
   margin-top: 4rem;
   padding-top: 3rem;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
-.skill-heading{
+
+/* Main skills heading */
+.skill-heading {
   text-align: center;
   font-size: var(--h2-font);
-  margin-bottom: 1.5rem;
-  color:var(--text-color)
+  margin-bottom: 2.5rem;
+  color: var(--text-color);
 }
-.skill-heading,span{
+
+.skill-heading span {
   color: var(--main-color);
 }
 
@@ -96,9 +100,9 @@
 }
 
 .skill-group h4 {
-  font-size: 1.4rem;
-  margin-bottom: 1.5rem;
-  color: #fff;
+  font-size: 1.35rem;
+  margin-bottom: 1.4rem;
+  color: var(--text-color);
 }
 
 /* Horizontal skills */
@@ -117,52 +121,49 @@
 }
 
 .skill-logo i {
-  font-size: 4.5rem;
+  font-size: 4.2rem;
 }
 
 .skill-logo span {
-  font-size: 0.98rem;
-  color:var(--second-color);
+  font-size: 0.95rem;
+  color: var(--second-color);
 }
 
 /* =========================
-   Mobile Responsive (FIXED)
-   ========================= */
-
-/* =========================
-   Mobile Fixes for About Hero
+   Mobile Responsive Fixes
    ========================= */
 
 @media (max-width: 768px) {
-  
-  /* Ensure overlay content is centered and fits well */
+
+  /* Disable overlay on mobile */
   .about-overlay {
-    padding: 0 8%;
+    background: none;
+    padding: 0 6%;
     justify-content: center;
   }
 
-  /* About heading size adjustment */
-  .about-text h2 {
-    font-size: 1.8rem; /* Slightly bigger on mobile so it doesn't look too small */
-    margin-bottom: 1rem;
+  .about-text {
+    text-align: left;
   }
 
-  /* About paragraph font size slightly smaller for better fit */
-  .about-text p {
-    font-size: 0.95rem;
+  /* ✅ Mobile heading size – balanced */
+  .about-text h2 {
+    font-size: 2rem;   /* 👈 Proper mobile size */
     margin-bottom: 1.2rem;
   }
 
-  /* Button should stay within the overlay */
-  .about-actions {
-    text-align: center;
+  /* ✅ Mobile paragraph size – readable */
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
   }
 
+  /* Button */
   .about-actions .btn {
-    padding: 10px 24px; /* Slightly smaller padding on mobile */
+    padding: 10px 22px;
     font-size: 0.9rem;
   }
-
 
   /* Skills */
   .skills {
@@ -170,21 +171,25 @@
     padding-top: 2.5rem;
   }
 
+  .skill-heading{
+    font-size: 2rem;   /* 👈 Proper mobile size */
+    margin-bottom: 1.2rem;
+  }
   .skill-group h4 {
     text-align: center;
+    font-size: 1.25rem;
   }
 
   .skills-horizontal {
-    justify-content: center; /* 👈 IMPORTANT FIX */
+    justify-content: center;
     gap: 2rem;
   }
 
   .skill-logo i {
-    font-size: 2.4rem;
+    font-size: 2.6rem;   /* 👈 Mobile friendly */
   }
 
   .skill-logo span {
     font-size: 0.85rem;
   }
-
 }

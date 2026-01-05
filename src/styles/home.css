@@ -165,7 +165,7 @@
   }
 
   .home-content h1 {
-    font-size: 3rem;
+    font-size: var(--h2-font);
   }
 
   .home-content h3 {
