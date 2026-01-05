@@ -12,49 +12,61 @@ function Portfolio() {
       <div className="portfolio-grid">
 
         {/* Project 1 */}
-        <div className="project-card">
+        <div className="project-card modern">
           <div className="project-img">
-            <img src={project1} alt="Wedding Tree Project" />
+            <img src={project1} alt="The Wedding Tree Project" />
           </div>
 
           <div className="project-content">
-            <h3>The Wedding Tree</h3>
-            <p>
-              A complete event management website with responsive UI,
-              gallery, and contact form integration.
-            </p>
+            <span className="project-tag">Case Study</span>
 
-            <div className="project-tech">
-              React / Django / PostgreSQL
+            <h3>The Wedding Tree</h3>
+
+            <div className="project-story">
+              <p><strong>Problem:</strong> Manual event inquiries and poor user experience for clients.</p>
+              <p><strong>Solution:</strong> Built a full-stack event management platform with responsive UI and automated contact handling.</p>
+              <p><strong>Impact:</strong> Improved engagement and created a scalable, production-ready system.</p>
+            </div>
+
+            <div className="project-tech-badges">
+              <span>React</span>
+              <span>Django</span>
+              <span>PostgreSQL</span>
             </div>
 
             <div className="project-links">
-              <a href="#" className="primary">Live Demo</a>
-              <a href="#">GitHub</a>
+              <a href="https://theweddingtree.vercel.app" className="primary">Live Demo</a>
+              <a href="https://github.com/ArshanShaikh87/The-Wedding-Tree.git"><i className="fa-brands fa-github"></i></a>
             </div>
           </div>
         </div>
 
         {/* Project 2 */}
-        <div className="project-card">
+        <div className="project-card modern">
           <div className="project-img">
-            <img src={project2} alt="Portfolio Project" />
+            <img src={project2} alt="Personal Portfolio Project" />
           </div>
 
           <div className="project-content">
-            <h3>Personal Portfolio</h3>
-            <p>
-              A full stack developer portfolio built using React frontend
-              and Spring Boot backend with Oracle database.
-            </p>
+            <span className="project-tag">Case Study</span>
 
-            <div className="project-tech">
-              React / Spring Boot / Oracle
+            <h3>Personal Portfolio</h3>
+
+            <div className="project-story">
+              <p><strong>Problem:</strong> Need for a professional online presence to showcase skills and projects.</p>
+              <p><strong>Solution:</strong> Designed a modern developer portfolio using React frontend and Spring Boot backend.</p>
+              <p><strong>Impact:</strong> Clear presentation of skills, projects, and readiness for industry roles.</p>
+            </div>
+
+            <div className="project-tech-badges">
+              <span>React</span>
+              <span>Spring Boot</span>
+              <span>Oracle</span>
             </div>
 
             <div className="project-links">
-              <a href="#" className="primary">Live Demo</a>
-              <a href="#">GitHub</a>
+              <a href="https://arshanshaikh.vercel.app" className="primary">Live Demo</a>
+              <a href="https://github.com/ArshanShaikh87/Portfolio.git"><i className="fa-brands fa-github"></i></a>
             </div>
           </div>
         </div>
