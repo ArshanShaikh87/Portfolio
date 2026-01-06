@@ -18,95 +18,101 @@
 }
 
 /* =========================
-   Grid
+   Split Layout
    ========================= */
 
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
-  align-items: stretch;
+.portfolio-split {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
 
 /* =========================
-   Modern Project Card
+   Split Card
    ========================= */
 
-.project-card.modern {
+.split-card {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
   background: var(--bg-color);
-  border-radius: 22px;
-  overflow: hidden;
+  border-radius: 24px;
+  padding: 2.5rem;
   border: 1.5px solid rgba(255, 77, 5, 0.15);
-  transition: all 0.35s ease;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  transition: 0.35s ease;
 }
 
-.project-card.modern:hover {
-  transform: translateY(-10px);
+.split-card:hover {
   border-color: var(--main-color);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.45);
 }
 
-/* Image */
-.project-img img {
+/* =========================
+   Image
+   ========================= */
+
+.split-image img {
   width: 100%;
-  height: 240px;
+  max-height: 320px;
   object-fit: cover;
-  display: block;
+  border-radius: 18px;
 }
 
-/* Content */
-.project-content {
-  padding: 2rem;
+/* =========================
+   Content
+   ========================= */
+
+.split-content {
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
-/* Case Study Tag */
-.project-tag {
-  font-size: 0.75rem;
-  color: #000;
+.case-tag {
   background: var(--main-color);
-  padding: 0.25rem 0.8rem;
+  color: #000;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.8rem;
   border-radius: 20px;
   width: fit-content;
   margin-bottom: 1rem;
   font-weight: 600;
 }
 
-/* Title */
-.project-content h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+.short-desc {
+  color: var(--second-color);
+  margin-bottom: 1.2rem;
 }
 
 /* =========================
-   Story (Hover Animation)
+   Case Details (Smooth)
    ========================= */
 
-.project-story {
-  font-size: 0.95rem;
-  color: var(--second-color);
-  line-height: 1.7;
-  margin-bottom: 1.6rem;
-  opacity: 0.9;
-  transform: translateY(8px);
-  transition: all 0.3s ease;
-}
-
-.project-card.modern:hover .project-story {
+.case-details {
+  max-height: 1000px; /* desktop expanded */
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.3s ease;
   opacity: 1;
-  transform: translateY(0);
 }
 
-.project-story p {
-  margin-bottom: 0.6rem;
+@media (max-width: 768px) {
+  .case-details {
+    max-height: 0;
+    opacity: 0;
+  }
+
+  .case-details.expanded {
+    max-height: 600px;
+    opacity: 1;
+  }
 }
 
-.project-story strong {
+.case-details p {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: var(--second-color);
+}
+
+.case-details strong {
   color: var(--text-color);
 }
 
@@ -114,14 +120,14 @@
    Tech Badges
    ========================= */
 
-.project-tech-badges {
+.tech-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
-  margin-bottom: 1.8rem;
+  margin: 1.4rem 0;
 }
 
-.project-tech-badges span {
+.tech-badges span {
   font-size: 0.75rem;
   padding: 0.35rem 0.9rem;
   border-radius: 20px;
@@ -130,69 +136,67 @@
   border: 1px solid rgba(255, 77, 5, 0.3);
 }
 
-
 /* =========================
-   Links
+   Action Buttons
    ========================= */
 
-.project-links {
-  margin-top: auto;
+.project-actions {
   display: flex;
   gap: 1rem;
+  margin-bottom: 1.2rem;
 }
 
-.project-links a {
-  padding: 0.65rem 1.5rem;
+.project-actions a {
+  padding: 0.6rem 1.4rem;
   border-radius: 30px;
   border: 1.5px solid var(--main-color);
   text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--text-color);
-  transition: all 0.3s ease;
+  color: var(--main-color);
+  font-size: 0.9rem;
+  transition: 0.3s ease;
 }
 
-.project-links a.primary {
+.project-actions a:hover {
   background: var(--main-color);
-  color:var(--text-color);
-}
-
-.project-links a:hover {
-  background: var(--main-color);
-  color: var(--bg-color);
+  color: #000;
 }
 
 /* =========================
-   Tablet
+   Read More (Mobile Only)
+   ========================= */
+
+.read-more-btn {
+  background: none;
+  border: 1.5px solid var(--main-color);
+  color: var(--main-color);
+  padding: 0.6rem 1.6rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-only {
+    display: inline-block;
+  }
+}
+
+/* =========================
+   Responsive
    ========================= */
 
 @media (max-width: 992px) {
-  .portfolio-grid {
+  .split-card {
     grid-template-columns: 1fr;
   }
 }
 
-/* =========================
-   Mobile
-   ========================= */
-
 @media (max-width: 768px) {
   .portfolio {
     padding: 5rem 6%;
-  }
-
-  .project-img img {
-    height: 210px;
-  }
-  .portfolio h2{
-    font-size: 2rem;
-  }
-  .portfolio p {
-    font-size: 0.95rem;
-    line-height: 1.7;
-    margin-bottom: 1.2rem;
-  }
-  .portfolio h3{
-    font-size: 1.3rem;
   }
 }
