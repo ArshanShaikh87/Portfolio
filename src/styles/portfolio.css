@@ -149,16 +149,22 @@
 .project-actions a {
   padding: 0.6rem 1.4rem;
   border-radius: 30px;
-  border: 1.5px solid var(--main-color);
+  border: 1.5px solid var(--second-bg-color);
   text-decoration: none;
-  color: var(--main-color);
+  color: var(--text-color);
+  background: var(--second-bg-color);
   font-size: 0.9rem;
   transition: 0.3s ease;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
 }
 
 .project-actions a:hover {
-  background: var(--main-color);
-  color: #000;
+  background: var(--second-bg-color);
+  color:var(--text-color);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(255, 77, 5, 0.45);
 }
 
 /* =========================
@@ -167,12 +173,12 @@
 
 .read-more-btn {
   background: none;
-  border: 1.5px solid var(--main-color);
-  color: var(--main-color);
+  border: 1.5px solid var(--bg-color);
+  color: var(--text-color);
   padding: 0.6rem 1.6rem;
   border-radius: 30px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .mobile-only {
@@ -198,5 +204,16 @@
 @media (max-width: 768px) {
   .portfolio {
     padding: 5rem 6%;
+  }
+  .portfolio h2{
+    font-size: 2rem;
+  }
+  .portfolio p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+  }
+  .portfolio h3{
+    font-size: 1.3rem;
   }
 }
