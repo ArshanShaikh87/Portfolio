@@ -78,7 +78,7 @@ function Portfolio() {
                 {/* Action Buttons */}
                 <div className="project-actions">
                   <a href={project.live} target="_blank" rel="noreferrer">
-                    Live Project
+                    Check Live
                   </a>
                   <a href={project.github} target="_blank" rel="noreferrer">
                     GitHub
