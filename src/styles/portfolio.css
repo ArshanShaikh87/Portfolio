@@ -216,4 +216,7 @@
   .portfolio h3{
     font-size: 1.3rem;
   }
+  .project-actions a{
+    font-size: 0.7rem;
+  }
 }
