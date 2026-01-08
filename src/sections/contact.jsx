@@ -32,7 +32,8 @@ function Contact() {
               arshanshaikh200@gmail.com
             </a>
           </div>
-
+          <div class="Follow">
+          Follow <span>Us.</span></div>
           <div className="social-links">
             <a href="https://www.linkedin.com" target="_blank" title="LinkedIn">
               <i className="fab fa-linkedin-in"></i>
