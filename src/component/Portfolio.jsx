@@ -575,7 +575,7 @@ const WORK = [
     stack: ["React", "Node.js", "MongoDB"],
     screenshots: [],
   },
-  { glyph: "03", tag: "PRODUCT MAINTAINANCE", title: "Entgra", desc: "Contributing to Entgra's Quality Process module maintaining existing functionality, fixing issues, and building new features to support the team's quality workflows as the product evolves", stack: ["React js", "Node.js", "WinSCP"] },
+  { glyph: "04", tag: "PRODUCT MAINTAINANCE", title: "Entgra", desc: "Contributing to Entgra's Quality Process module maintaining existing functionality, fixing issues, and building new features to support the team's quality workflows as the product evolves", stack: ["React js", "Node.js", "WinSCP"] },
 ];
 
 const Work = ({ onOpenProject }) => (
