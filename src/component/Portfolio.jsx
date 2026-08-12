@@ -762,7 +762,7 @@ const CTA = () => (
         <h2>Have a website in mind?<br />Let's put it on paper.</h2>
         <p>Tell me what you're building   I'll reply within a day with a scope and a straight answer on timeline and cost.</p>
         <a href="mailto:arshanmunirsahikh@gmail.com" className="btn btn-primary" style={{ padding: "15px 30px", fontSize: "14.5px" }}>
-          hello@arshansmunirhaikh.dev →
+          arshansmunirhaikh.dev →
         </a>
       </div>
     </div>
