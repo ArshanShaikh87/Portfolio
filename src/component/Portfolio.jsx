@@ -391,9 +391,9 @@ const Hero = () => (
 );
 
 const STATS = [
-  { num: "60", suffix: "+", label: "Projects shipped" },
-  { num: "40", suffix: "+", label: "Clients served" },
-  { num: "5", suffix: "yrs", label: "Building on the web" },
+  { num: "10", suffix: "+", label: "Projects shipped" },
+  { num: "8", suffix: "+", label: "Clients served" },
+  { num: "3", suffix: "yrs", label: "Building on the web" },
   { num: "98", suffix: "%", label: "On-time delivery" },
 ];
 
@@ -444,8 +444,8 @@ const Services = () => (
 );
 
 const WORK = [
-  { glyph: "01", tag: "E-COMMERCE", title: "Kirana Cart", desc: "Full storefront rebuild for a D2C grocery brand   cart, checkout, and an admin panel for inventory.", stack: ["React", "Node.js", "Stripe"] },
-  { glyph: "02", tag: "SAAS DASHBOARD", title: "Flowtrack", desc: "Analytics dashboard for a project-management SaaS   live charts, filters, and role-based views.", stack: ["Next.js", "PostgreSQL", "Recharts"] },
+  { glyph: "01", tag: "COMPANY PORTFOLIO", title: "The Wedding Tree", desc: "Full storefront rebuild for a D2C grocery brand   cart, checkout, and an admin panel for inventory.", stack: ["React", "Node.js", "Supabase"] },
+  { glyph: "02", tag: "SAAS DASHBOARD", title: "CoverLetters", desc: "Analytics dashboard for a project-management SaaS   live charts, filters, and role-based views.", stack: ["React Js", "Vercel", "Serverless Function"] },
   { glyph: "03", tag: "AGENCY SITE", title: "Studio Verse", desc: "Portfolio and booking site for a design studio   scroll-driven case studies and a lead-capture form.", stack: ["HTML/CSS", "GSAP", "Netlify"] },
   { glyph: "04", tag: "EDTECH", title: "LearnLoop", desc: "Course platform with video lessons, progress tracking, and a quiz engine for a solo educator.", stack: ["React", "Firebase", "Tailwind"] },
 ];
@@ -517,7 +517,7 @@ const Process = () => (
 );
 
 const TESTIMONIALS = [
-  { quote: "Arshan rebuilt our storefront in three weeks and load times dropped by half. Communication was clear the entire way.", name: "Riya Sharma", role: "Founder, Kirana Cart" },
+  { quote: "Arshan rebuilt our storefront in three weeks and load times dropped by half. Communication was clear the entire way.", name: "Tosif Shaikh", role: "Founder, The Wedding Tree" },
   { quote: "Genuinely one of the few developers who designs and codes well. The dashboard he built is still our internal favorite tool.", name: "Devansh Rao", role: "CEO, Flowtrack" },
   { quote: "Fast, precise, and easy to brief. Our new site brought in more inbound leads in the first month than the old one did all year.", name: "Meera Iyer", role: "Director, Studio Verse" },
 ];
@@ -557,8 +557,8 @@ const CTA = () => (
         <div className="eyebrow" style={{ justifyContent: "center" }}>Let's build something</div>
         <h2>Have a website in mind?<br />Let's put it on paper.</h2>
         <p>Tell me what you're building   I'll reply within a day with a scope and a straight answer on timeline and cost.</p>
-        <a href="mailto:hello@arshanshaikh.dev" className="btn btn-primary" style={{ padding: "15px 30px", fontSize: "14.5px" }}>
-          hello@arshanshaikh.dev →
+        <a href="mailto:arshanmunirsahikh@gmail.com" className="btn btn-primary" style={{ padding: "15px 30px", fontSize: "14.5px" }}>
+          hello@arshansmunirhaikh.dev →
         </a>
       </div>
     </div>
@@ -572,9 +572,9 @@ const Footer = () => (
       <ul className="f-links">
         <li><a href="#work">Work</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="mailto:hello@arjunmehta.dev">Email</a></li>
-        <li><a href="#">GitHub</a></li>
-        <li><a href="#">LinkedIn</a></li>
+        <li><a href="mailto:arshanmunirshaikh@gmail.com">Email</a></li>
+        <li><a href="https://github.com/ArshanShaikh87">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/arshanshaikh/">LinkedIn</a></li>
       </ul>
     </div>
   </footer>
