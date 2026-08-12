@@ -561,8 +561,8 @@ const WORK = [
     title: "The Wedding Tree",
     desc: "Portfolio website built for Wedding Tree to showcase their event and wedding-planning work to prospective clients in one polished, browsable place.",
     fullDesc: "Wedding Tree needed a home online that reflected the quality of their event work. The site is built around a visual, browsable gallery of past weddings and events, structured so prospective clients can quickly get a feel for the company's style and scale of work before reaching out.",
-    link: "https://the-wedding-tree-react-spring-cuf91e6vs.vercel.app",
-    stack: ["React", "JavaScript", "Vercel"],
+    link: "https://weddingtree.vercel.app",
+    stack: ["React", "Node", "Vercel"],
     screenshots: [],
   },
   {
