@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 
 /* ============================================================
-   Arshan Shaikh — Portfolio (JSX version)
+   Arshan Shaikh   Portfolio (JSX version)
    Same exact visual style as the original HTML/CSS file.
    Sections are split into separate components below.
    ============================================================ */
@@ -356,12 +356,12 @@ const Hero = () => (
   <section className="hero">
     <div className="wrap">
       <div>
-        <div className="eyebrow fade-up">Open for new projects — Ahmednagar, IN</div>
+        <div className="eyebrow fade-up">Open for new projects   Ahmednagar, IN</div>
         <h1 className="fade-up" style={{ animationDelay: ".1s" }}>
           I design and build websites &amp; Apps that <em>look sharp</em> and hold up under real use.
         </h1>
         <p className="lead fade-up" style={{ animationDelay: ".2s" }}>
-          Frontend & full-stack developer crafting modern, fast, responsive websites — from landing pages to full product interfaces. Every project ships with clean code, considered motion, and a design system that scales.
+          Frontend & full-stack developer crafting modern, fast, responsive websites   from landing pages to full product interfaces. Every project ships with clean code, considered motion, and a design system that scales.
         </p>
         <div className="hero-ctas fade-up" style={{ animationDelay: ".3s" }}>
           <a href="#contact" className="btn btn-primary">Get a free consultation →</a>
@@ -378,7 +378,7 @@ const Hero = () => (
           <rect className="draw-line" x="180" y="120" width="160" height="140" rx="2" stroke="var(--paper-dim)" strokeWidth="1.5" style={{ animationDelay: ".9s" }}/>
           <circle className="pulse-dot" cx="220" cy="150" r="4" fill="var(--signal)"/>
           <path className="draw-line" d="M220 150 h60" stroke="var(--signal)" strokeWidth="1" style={{ animationDelay: "1.1s" }}/>
-          <text className="dim-label" x="60" y="112">HEADER — 1440×72</text>
+          <text className="dim-label" x="60" y="112">HEADER   1440×72</text>
           <text className="dim-label" x="60" y="240">NAV</text>
           <text className="dim-label" x="184" y="112">MAIN CANVAS</text>
           <text className="dim-label" x="230" y="146">◎ live component</text>
@@ -411,11 +411,11 @@ const Stats = () => (
 );
 
 const SERVICES = [
-  { code: "SRV / 01", title: "Website Design", desc: "Custom UI design in Figma — modern layouts, real typography systems, and a look that's distinct to your brand, not a theme." },
+  { code: "SRV / 01", title: "Website Design", desc: "Custom UI design in Figma   modern layouts, real typography systems, and a look that's distinct to your brand, not a theme." },
   { code: "SRV / 02", title: "Frontend Development", desc: "Pixel-accurate, responsive builds in React or plain HTML/CSS/JS, with motion and interaction done with restraint." },
-  { code: "SRV / 03", title: "Full-Stack Builds", desc: "End-to-end products — auth, databases, dashboards, payments — wired up and deployed, not just prototyped." },
+  { code: "SRV / 03", title: "Full-Stack Builds", desc: "End-to-end products   auth, databases, dashboards, payments   wired up and deployed, not just prototyped." },
   { code: "SRV / 04", title: "Landing Pages", desc: "Conversion-focused single pages for launches and campaigns, live in days, built to load fast and rank." },
-  { code: "SRV / 05", title: "Website Revamp", desc: "Take an existing site from dated to current — same content, new structure, modern performance." },
+  { code: "SRV / 05", title: "Website Revamp", desc: "Take an existing site from dated to current   same content, new structure, modern performance." },
   { code: "SRV / 06", title: "Care & Maintenance", desc: "Ongoing updates, fixes, and small feature work after launch, so the site keeps working as your business grows." },
 ];
 
@@ -427,7 +427,7 @@ const Services = () => (
           <div className="eyebrow">What I do</div>
           <h2>Services built around what your site actually needs to do.</h2>
         </div>
-        <p>No bloated packages — pick a service, or combine a few. Every engagement starts with a scope, not a guess.</p>
+        <p>No bloated packages   pick a service, or combine a few. Every engagement starts with a scope, not a guess.</p>
       </div>
       <div className="services-grid reveal">
         {SERVICES.map((s, i) => (
@@ -444,9 +444,9 @@ const Services = () => (
 );
 
 const WORK = [
-  { glyph: "01", tag: "E-COMMERCE", title: "Kirana Cart", desc: "Full storefront rebuild for a D2C grocery brand — cart, checkout, and an admin panel for inventory.", stack: ["React", "Node.js", "Stripe"] },
-  { glyph: "02", tag: "SAAS DASHBOARD", title: "Flowtrack", desc: "Analytics dashboard for a project-management SaaS — live charts, filters, and role-based views.", stack: ["Next.js", "PostgreSQL", "Recharts"] },
-  { glyph: "03", tag: "AGENCY SITE", title: "Studio Verse", desc: "Portfolio and booking site for a design studio — scroll-driven case studies and a lead-capture form.", stack: ["HTML/CSS", "GSAP", "Netlify"] },
+  { glyph: "01", tag: "E-COMMERCE", title: "Kirana Cart", desc: "Full storefront rebuild for a D2C grocery brand   cart, checkout, and an admin panel for inventory.", stack: ["React", "Node.js", "Stripe"] },
+  { glyph: "02", tag: "SAAS DASHBOARD", title: "Flowtrack", desc: "Analytics dashboard for a project-management SaaS   live charts, filters, and role-based views.", stack: ["Next.js", "PostgreSQL", "Recharts"] },
+  { glyph: "03", tag: "AGENCY SITE", title: "Studio Verse", desc: "Portfolio and booking site for a design studio   scroll-driven case studies and a lead-capture form.", stack: ["HTML/CSS", "GSAP", "Netlify"] },
   { glyph: "04", tag: "EDTECH", title: "LearnLoop", desc: "Course platform with video lessons, progress tracking, and a quiz engine for a solo educator.", stack: ["React", "Firebase", "Tailwind"] },
 ];
 
@@ -456,7 +456,7 @@ const Work = () => (
       <div className="section-head reveal">
         <div>
           <div className="eyebrow">Selected work</div>
-          <h2>A few projects that show the range — commerce, product, and content.</h2>
+          <h2>A few projects that show the range   commerce, product, and content.</h2>
         </div>
         <p>Each one shipped to a real client, with real constraints and a real deadline.</p>
       </div>
@@ -487,9 +487,9 @@ const Work = () => (
 );
 
 const PROCESS = [
-  { stage: "STAGE 01", title: "Discover", desc: "We define the goal, audience, and scope in a short call — you get a written plan, not a guess." },
+  { stage: "STAGE 01", title: "Discover", desc: "We define the goal, audience, and scope in a short call   you get a written plan, not a guess." },
   { stage: "STAGE 02", title: "Design", desc: "Wireframes, then a full visual design in Figma, reviewed with you before a line of code is written." },
-  { stage: "STAGE 03", title: "Build", desc: "Development in weekly checkpoints — you see progress live, not just at the end." },
+  { stage: "STAGE 03", title: "Build", desc: "Development in weekly checkpoints   you see progress live, not just at the end." },
   { stage: "STAGE 04", title: "Launch", desc: "QA, performance pass, deployment, and a short handover so you can manage the site with confidence." },
 ];
 
@@ -556,7 +556,7 @@ const CTA = () => (
         <div className="cta-tick ct-br"></div>
         <div className="eyebrow" style={{ justifyContent: "center" }}>Let's build something</div>
         <h2>Have a website in mind?<br />Let's put it on paper.</h2>
-        <p>Tell me what you're building — I'll reply within a day with a scope and a straight answer on timeline and cost.</p>
+        <p>Tell me what you're building   I'll reply within a day with a scope and a straight answer on timeline and cost.</p>
         <a href="mailto:hello@arshanshaikh.dev" className="btn btn-primary" style={{ padding: "15px 30px", fontSize: "14.5px" }}>
           hello@arshanshaikh.dev →
         </a>
