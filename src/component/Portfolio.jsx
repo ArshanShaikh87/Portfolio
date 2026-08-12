@@ -501,10 +501,10 @@ const Services = () => (
 );
 
 const WORK = [
-  { glyph: "01", tag: "COMPANY PORTFOLIO", title: "The Wedding Tree", desc: "Full storefront rebuild for a D2C grocery brand   cart, checkout, and an admin panel for inventory.", stack: ["React", "Node.js", "Supabase"] },
-  { glyph: "02", tag: "SAAS DASHBOARD", title: "CoverLetters", desc: "Analytics dashboard for a project-management SaaS   live charts, filters, and role-based views.", stack: ["React Js", "Vercel", "Serverless Function"] },
-  { glyph: "03", tag: "AGENCY SITE", title: "Studio Verse", desc: "Portfolio and booking site for a design studio   scroll-driven case studies and a lead-capture form.", stack: ["HTML/CSS", "GSAP", "Netlify"] },
-  { glyph: "04", tag: "EDTECH", title: "LearnLoop", desc: "Course platform with video lessons, progress tracking, and a quiz engine for a solo educator.", stack: ["React", "Firebase", "Tailwind"] },
+  { glyph: "01", tag: "COMPANY PORTFOLIO", title: "The Wedding Tree", desc: "Portfolio website built for Wedding Tree to showcase their event and wedding-planning work to prospective clients in one polished, browsable place.", stack: ["React js", "Node.js", "Supabase"] },
+  { glyph: "02", tag: "AI TOOL", title: "CoverLetters", desc: "A login-free tool that turns a resume and job description into a tailored cover letter in seconds — no account, no friction, just paste and generate.", stack: ["React Js", "Vercel", "Serverless Function"] },
+  { glyph: "03", tag: "PRODUCT MAINTAINANCE", title: "Entgra", desc: "Portfolio and booking site for a design studio   scroll-driven case studies and a lead-capture form.", stack: ["React js", "Node.js", "WINscp"] },
+  { glyph: "04", tag: "PRODUCTIVITY TOOL", title: "NeverDesk", desc: "A workspace for handling multiple tasks at once — every task's status and performance shows up in a single unified dashboard so nothing gets lost.", stack: ["React", "Node.js", "Tailwind"] },
 ];
 
 const Work = () => (
