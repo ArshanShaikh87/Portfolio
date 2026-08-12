@@ -502,9 +502,9 @@ const Services = () => (
 
 const WORK = [
   { glyph: "01", tag: "COMPANY PORTFOLIO", title: "The Wedding Tree", desc: "Portfolio website built for Wedding Tree to showcase their event and wedding-planning work to prospective clients in one polished, browsable place.", stack: ["React js", "Node.js", "Supabase"] },
-  { glyph: "02", tag: "AI TOOL", title: "CoverLetters", desc: "A login-free tool that turns a resume and job description into a tailored cover letter in seconds — no account, no friction, just paste and generate.", stack: ["React Js", "Vercel", "Serverless Function"] },
-  { glyph: "03", tag: "PRODUCT MAINTAINANCE", title: "Entgra", desc: "Portfolio and booking site for a design studio   scroll-driven case studies and a lead-capture form.", stack: ["React js", "Node.js", "WINscp"] },
-  { glyph: "04", tag: "PRODUCTIVITY TOOL", title: "NeverDesk", desc: "A workspace for handling multiple tasks at once — every task's status and performance shows up in a single unified dashboard so nothing gets lost.", stack: ["React", "Node.js", "Tailwind"] },
+  { glyph: "02", tag: "AI TOOL", title: "CoverLetters", desc: "A login-free tool that turns a resume and job description into a tailored cover letter in seconds, no account, no friction, just paste and generate.", stack: ["React Js", "Vercel", "Serverless Function"] },
+  { glyph: "03", tag: "PRODUCT MAINTAINANCE", title: "Entgra", desc: "Contributing to Entgra's Quality Process module maintaining existing functionality, fixing issues, and building new features to support the team's quality workflows as the product evolves", stack: ["React js", "Node.js", "WinSCP"] },
+  { glyph: "04", tag: "PRODUCTIVITY TOOL", title: "NeverDesk", desc: "A workspace for handling multiple tasks at once every task's status and performance shows up in a single unified dashboard so nothing gets lost.", stack: ["React", "Node.js", "Tailwind"] },
 ];
 
 const Work = () => (
