@@ -575,8 +575,8 @@ const Process = () => (
 
 const TESTIMONIALS = [
   { quote: "Arshan rebuilt our storefront in three weeks and load times dropped by half. Communication was clear the entire way.", name: "Tosif Shaikh", role: "Founder, The Wedding Tree" },
-  { quote: "Genuinely one of the few developers who designs and codes well. The dashboard he built is still our internal favorite tool.", name: "Devansh Rao", role: "CEO, Flowtrack" },
-  { quote: "Fast, precise, and easy to brief. Our new site brought in more inbound leads in the first month than the old one did all year.", name: "Meera Iyer", role: "Director, Studio Verse" },
+  { quote: "Genuinely one of the few developers who designs and codes well. The dashboard he built is still our internal favorite tool.", name: "Shruti Salve", role: "Technical Account Manager, EPL" },
+  { quote: "Fast, precise, and easy to brief. Our new site brought in more inbound leads in the first month than the old one did all year.", name: "Apeksha Singh", role: "Cordinator, Kosqu & EPL" },
 ];
 
 const Testimonials = () => (
