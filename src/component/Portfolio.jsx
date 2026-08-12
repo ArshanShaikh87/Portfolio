@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ThemeProvider, useTheme, ThemeToggleButton } from "./ThemeToggle";
 
 /* ============================================================
@@ -173,8 +173,10 @@ const GlobalStyles = () => (
   .work-card{
     border:1px solid var(--grid-line-strong); padding:0; overflow:hidden; position:relative;
     transition:transform .35s ease, border-color .35s ease; text-decoration:none; color:inherit; display:block;
+    background:none; font:inherit; text-align:left; width:100%; cursor:pointer;
   }
   .work-card:hover{ transform:translateY(-6px); border-color:var(--signal); }
+  .work-card:focus-visible{ outline:2px solid var(--signal); outline-offset:3px; }
   .work-visual{
     height:230px; position:relative; overflow:hidden;
     display:flex; align-items:center; justify-content:center;
@@ -282,6 +284,48 @@ const GlobalStyles = () => (
     .cta-section h2{ font-size:28px; }
     footer .wrap{ flex-direction:column; align-items:flex-start; gap:14px; }
     footer .f-links{ flex-wrap:wrap; gap:16px 20px; }
+  }
+
+  /* ---------- Project detail modal ---------- */
+  .modal-overlay{
+    position:fixed; inset:0; z-index:100;
+    background:rgba(2,3,4,0.72); backdrop-filter:blur(4px);
+    display:flex; align-items:center; justify-content:center;
+    padding:24px; animation:modalFadeIn .25s ease forwards;
+  }
+  @keyframes modalFadeIn{ from{opacity:0;} to{opacity:1;} }
+  [data-theme="light"] .modal-overlay{ background:rgba(2,3,4,0.55); }
+  .modal-panel{
+    background:var(--blueprint); border:1px solid var(--grid-line-strong);
+    max-width:640px; width:100%; max-height:86vh; overflow-y:auto;
+    padding:40px; position:relative;
+    animation:modalRise .3s cubic-bezier(.2,.8,.2,1) forwards;
+  }
+  @keyframes modalRise{ from{opacity:0; transform:translateY(18px) scale(.98);} to{opacity:1; transform:translateY(0) scale(1);} }
+  .modal-close{
+    position:absolute; top:18px; right:18px; width:34px; height:34px;
+    border:1px solid var(--grid-line-strong); background:none; color:var(--paper);
+    border-radius:50%; cursor:pointer; font-size:14px; display:flex; align-items:center; justify-content:center;
+    transition:border-color .2s ease, color .2s ease;
+  }
+  .modal-close:hover{ border-color:var(--signal); color:var(--signal); }
+  .modal-head{ padding-right:40px; margin-bottom:18px; }
+  .modal-head h3{ font-family:var(--display); font-size:26px; font-weight:600; margin:12px 0 14px; }
+  .modal-desc{ font-size:14.5px; line-height:1.75; color:var(--paper-dim); margin-bottom:26px; }
+  .modal-link{ display:inline-flex; margin-bottom:30px; padding:12px 22px; font-size:13.5px; }
+  .modal-shots{ display:flex; flex-direction:column; gap:16px; }
+  .modal-shot{
+    border:1px solid var(--grid-line-strong); overflow:hidden; border-radius:2px;
+    background:var(--blueprint-deep);
+  }
+  .modal-shot img{ width:100%; height:auto; display:block; }
+  .modal-shot-empty{
+    height:160px; display:flex; align-items:center; justify-content:center;
+    font-family:var(--mono); font-size:12px; color:var(--paper-faint); letter-spacing:0.05em;
+  }
+  @media (max-width:600px){
+    .modal-panel{ padding:26px 20px; max-height:90vh; }
+    .modal-head h3{ font-size:22px; }
   }
 
   /* ============================================================
@@ -501,13 +545,40 @@ const Services = () => (
 );
 
 const WORK = [
-  { glyph: "01", tag: "COMPANY PORTFOLIO", title: "The Wedding Tree", desc: "Portfolio website built for Wedding Tree to showcase their event and wedding-planning work to prospective clients in one polished, browsable place.", stack: ["React js", "Node.js", "Supabase"] },
-  { glyph: "02", tag: "AI TOOL", title: "CoverLetters", desc: "A login-free tool that turns a resume and job description into a tailored cover letter in seconds, no account, no friction, just paste and generate.", stack: ["React Js", "Vercel", "Serverless Function"] },
+{
+    glyph: "01",
+    tag: "AI TOOL",
+    title: "Cover Letter Generator",
+    desc: "A login-free tool that turns a resume and job description into a tailored cover letter in seconds — no account, no friction, just paste and generate.",
+    fullDesc: "Built to remove every bit of friction between a job seeker and a finished cover letter. There's no sign-up and no account — the user pastes their resume and the job description, and the tool generates a tailored letter that matches the role's language and requirements. The focus was on speed, privacy (nothing is stored), and getting the tone right without sounding generic or robotic.",
+    link: "https://example.com/cover-letter-tool",
+    stack: ["React", "Node.js", "OpenAI API"],
+    screenshots: [],
+  },
+  {
+    glyph: "02",
+    tag: "AGENCY PORTFOLIO",
+    title: "Wedding Tree",
+    desc: "Portfolio website built for Wedding Tree to showcase their event and wedding-planning work to prospective clients in one polished, browsable place.",
+    fullDesc: "Wedding Tree needed a home online that reflected the quality of their event work. The site is built around a visual, browsable gallery of past weddings and events, structured so prospective clients can quickly get a feel for the company's style and scale of work before reaching out.",
+    link: "https://example.com/wedding-tree",
+    stack: ["HTML/CSS", "JavaScript", "Netlify"],
+    screenshots: [],
+  },
+  {
+    glyph: "03",
+    tag: "PRODUCTIVITY TOOL",
+    title: "NeverDesk",
+    desc: "A workspace for handling multiple tasks at once — every task's status and performance shows up in a single unified dashboard so nothing gets lost.",
+    fullDesc: "NeverDesk is built for people juggling several tasks at once. Instead of switching between tools to check progress, everything — task status, performance, and history — lives in one dashboard. The goal was to cut down on context-switching and give a single, honest view of where everything stands.",
+    link: "https://example.com/neverdesk",
+    stack: ["React", "Node.js", "MongoDB"],
+    screenshots: [],
+  },
   { glyph: "03", tag: "PRODUCT MAINTAINANCE", title: "Entgra", desc: "Contributing to Entgra's Quality Process module maintaining existing functionality, fixing issues, and building new features to support the team's quality workflows as the product evolves", stack: ["React js", "Node.js", "WinSCP"] },
-  { glyph: "04", tag: "PRODUCTIVITY TOOL", title: "NeverDesk", desc: "A workspace for handling multiple tasks at once every task's status and performance shows up in a single unified dashboard so nothing gets lost.", stack: ["React", "Node.js", "Tailwind"] },
 ];
 
-const Work = () => (
+const Work = ({ onOpenProject }) => (
   <section className="section" id="work">
     <div className="wrap">
       <div className="section-head reveal">
@@ -519,7 +590,12 @@ const Work = () => (
       </div>
       <div className="work-grid reveal">
         {WORK.map((w, i) => (
-          <a className="work-card" href="#contact" key={i}>
+          <button
+            type="button"
+            className="work-card"
+            key={i}
+            onClick={() => onOpenProject(w)}
+          >
             <div className="work-visual">
               <span className="glyph">{w.glyph}</span>
               <span className="tag-float" style={{ top: "18px", left: "18px" }}>{w.tag}</span>
@@ -536,12 +612,83 @@ const Work = () => (
                 ))}
               </div>
             </div>
-          </a>
+          </button>
         ))}
       </div>
     </div>
   </section>
 );
+
+const ProjectModal = ({ project, onClose }) => {
+  useEffect(() => {
+    if (!project) return;
+
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", onKeyDown);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [project, onClose]);
+
+  if (!project) return null;
+
+  return (
+    <div className="modal-overlay" onClick={onClose}>
+      <div
+        className="modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-label={project.title}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button type="button" className="modal-close" onClick={onClose} aria-label="Close">
+          ✕
+        </button>
+
+        <div className="modal-head">
+          <span className="tag-float" style={{ position: "static" }}>{project.tag}</span>
+          <h3>{project.title}</h3>
+          <div className="stack">
+            {project.stack.map((s, j) => (
+              <span key={j}>{s}</span>
+            ))}
+          </div>
+        </div>
+
+        <p className="modal-desc">{project.fullDesc || project.desc}</p>
+
+        {project.link && (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary modal-link"
+          >
+            Visit live project →
+          </a>
+        )}
+
+        <div className="modal-shots">
+          {project.screenshots && project.screenshots.length > 0 ? (
+            project.screenshots.map((src, i) => (
+              <div className="modal-shot" key={i}>
+                <img src={src} alt={`${project.title} screenshot ${i + 1}`} />
+              </div>
+            ))
+          ) : (
+            <div className="modal-shot modal-shot-empty">
+              <span>Screenshots coming soon</span>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const PROCESS = [
   { stage: "STAGE 01", title: "Discover", desc: "We define the goal, audience, and scope in a short call   you get a written plan, not a guess." },
@@ -644,6 +791,7 @@ const Footer = () => (
 function PortfolioInner() {
   const containerRef = useScrollReveal();
   const { theme } = useTheme();
+  const [activeProject, setActiveProject] = useState(null);
 
   return (
     <div className="portfolio-root" data-theme={theme} ref={containerRef}>
@@ -656,11 +804,13 @@ function PortfolioInner() {
       <Hero />
       <Stats />
       <Services />
-      <Work />
+      <Work onOpenProject={setActiveProject} />
       <Process />
       <Testimonials />
       <CTA />
       <Footer />
+
+      <ProjectModal project={activeProject} onClose={() => setActiveProject(null)} />
     </div>
   );
 }
