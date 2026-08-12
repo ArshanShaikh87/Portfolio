@@ -244,10 +244,43 @@ const GlobalStyles = () => (
   }
   @media (max-width: 600px){
     .wrap{ padding:0 20px; }
+    nav{ padding:16px 20px; }
     .services-grid, .work-grid, .process, .testi-grid, .stats .wrap{ grid-template-columns:1fr; }
     .stat:not(:last-child)::after{ display:none; }
     .section{ padding:80px 0; }
     .cta-section .frame{ padding:50px 22px; }
+  }
+ 
+  @media (max-width: 400px){
+    .wrap{ padding:0 16px; }
+    nav{ padding:14px 16px; gap:10px; }
+    .logo{ font-size:16px; }
+    .nav-cta .btn-primary{ padding:9px 14px; font-size:12px; white-space:nowrap; }
+    .hero{ padding:70px 0 60px; }
+    .hero h1{ font-size:32px; margin:16px 0 18px; }
+    .hero p.lead{ font-size:15.5px; }
+    .hero-ctas{ gap:12px; }
+    .hero-ctas .btn{ padding:12px 18px; font-size:13px; flex:1 1 100%; justify-content:center; }
+    .schematic{ max-width:260px; }
+    .stats{ padding:28px 0; }
+    .stat .num{ font-size:26px; }
+    .stat .label{ font-size:10px; }
+    .section{ padding:60px 0; }
+    .section-head{ margin-bottom:36px; }
+    .section-head h2{ font-size:26px; }
+    .service-card{ padding:26px 20px; }
+    .work-visual{ height:180px; }
+    .work-visual .glyph{ font-size:64px; }
+    .work-body{ padding:18px 18px 20px; }
+    .proc-step{ padding:22px 18px; }
+    .testi-card{ padding:22px 18px; }
+    .testi-card p.quote{ padding-right:0; font-size:13.5px; }
+    .stamp{ position:static; margin-bottom:14px; transform:rotate(-6deg); }
+    .cta-section{ padding:70px 0; }
+    .cta-section .frame{ padding:40px 18px; }
+    .cta-section h2{ font-size:28px; }
+    footer .wrap{ flex-direction:column; align-items:flex-start; gap:14px; }
+    footer .f-links{ flex-wrap:wrap; gap:16px 20px; }
   }
   `}</style>
 );
