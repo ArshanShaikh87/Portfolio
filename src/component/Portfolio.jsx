@@ -115,7 +115,7 @@ const GlobalStyles = () => (
   }
   .hero p.lead{ font-size:17px; color:var(--paper-dim); max-width:490px; line-height:1.65; margin-bottom:34px;}
   .hero-ctas{ display:flex; gap:16px; align-items:center; flex-wrap:wrap;}
-  .hero-ctas .btn-primary{ padding:14px 26px; font-size:14px;}
+  .hero-ctas .btn-primary{ padding:14px 26px; font-size:17px;}
   .scroll-hint{ font-family:var(--mono); font-size:12px; color:var(--paper-faint); display:flex; align-items:center; gap:8px;}
 
   .fade-up{ opacity:0; transform:translateY(22px); animation:fadeUp .8s ease forwards; }
@@ -140,7 +140,7 @@ const GlobalStyles = () => (
   .stat:not(:last-child)::after{ content:""; position:absolute; right:0; top:10%; height:80%; width:1px; background:var(--grid-line-strong);}
   .stat .num{ font-family:var(--display); font-size:34px; font-weight:700; color:var(--paper);}
   .stat .num span{ color:var(--signal); }
-  .stat .label{ font-family:var(--mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--paper-faint); margin-top:6px;}
+  .stat .label{ font-family:var(--mono); font-size:14px; letter-spacing:0.09em; text-transform:uppercase; color:var(--paper-dim); margin-top:6px;}
 
   /* ---------- Section heading pattern ---------- */
   .section{ padding:120px 0; }
@@ -761,7 +761,7 @@ const CTA = () => (
         <div className="eyebrow" style={{ justifyContent: "center" }}>Let's build something</div>
         <h2>Have a website in mind?<br />Let's put it on paper.</h2>
         <p>Tell me what you're building   I'll reply within a day with a scope and a straight answer on timeline and cost.</p>
-        <a href="mailto:arshanmunirsahikh@gmail.com" className="btn btn-primary" style={{ padding: "15px 30px", fontSize: "14.5px" }}>
+        <a href="mailto:arshanmunirsahikh@gmail.com" className="btn btn-primary" style={{ padding: "15px 30px", fontSize: "17px" }}>
           arshansmunirhaikh.dev →
         </a>
       </div>
